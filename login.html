@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Authentication System</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <h1>Login Authentication System</h1>
+    <div class="main-container">
+      <div id="registrationPage">
+        <h2>Register</h2>
+        <div class="inputs">
+            <label for="registrationUsername">Username</label>
+            <input type="text" id="registrationUsername" placeholder="Enter your Username" />
+            <label for="registrationPassword">Password</label>
+            <input type="password" id="registrationPassword" placeholder="Enter your Password" />
+        </div>
+        <button onclick="registerUser()">Register</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </div>
+
+      <div id="loginPage" style="display: none">
+        <h2>Login</h2>
+        <div class="inputs">
+            <label for="loginUsername">Username</label>
+            <input type="text" id="loginUsername" placeholder="Enter your Username" />
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your Password" />
+        </div>
+        <button onclick="loginUser()">Login</button>
+        <p>Don't have an account?<a href="#" onclick="showRegistration()">Register</a></p>
+      </div>
+
+      <div id="homePage" style="display: none">
+        <h2>Secured Page</h2>
+        <p>
+          Welcome to the Page! You have logged in to an secured page Succesfully.
+        </p>
+        <button onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
